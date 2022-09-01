@@ -15,7 +15,11 @@ public class App
     {
         //create configuration
         Configuration configuration = new Configuration();
-        configuration.configure("hibernate.cfg.xml");
+        // if we have file name hibernate.cfg.xml no need to specify file name.
+        // configuration can file by default file name.
+        // If file name is different we need to mention file name.
+       // configuration.configure("myHibernate.cfg.xml");
+        configuration.configure();
         configuration.addAnnotatedClass(Song.class);
 
         //create session factory
